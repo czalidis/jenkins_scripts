@@ -5,4 +5,4 @@ export PUBLIC_DIR=~/public_html/api
 
 source /opt/ros/hydro/setup.bash
 
-../jenkins_scripts/generate_doc.py . $WORKSPACE/doc 
+./jenkins_scripts/generate_doc.py $REPO_NAME $WORKSPACE/doc 
