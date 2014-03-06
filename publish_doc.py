@@ -37,7 +37,7 @@ def publish_doc(packages, output_dir):
         
     # copying new docs
     for package in packages:
-      cmd = 'rsync -a ' + os.path.join(output_dir, package) + ' ' + public_dir
+      cmd = 'rsync -a' + ' ' + os.path.join(output_dir, package) + ' ' + public_dir
       print 'Executing:', cmd
       os.system(cmd)
     
