@@ -1,4 +1,4 @@
 jenkins_scripts
 ===============
 
-Scripts runninf on Jenkins CI
+Scripts running on Jenkins CI

@@ -11,6 +11,7 @@ import os
 import sys
 import commands
 import argparse
+from publish_doc import publish_doc
 
 parser = argparse.ArgumentParser(description='Generate documentation')
 parser.add_argument('root_of_pkgs', help='The root directory of packages')
@@ -40,8 +41,8 @@ for package in package_dirs:
   
   # make index-msg.html default page for packages containing msgs
   if 'communications' in package  or 'msgs' in package:
-    file = open(os.path.join(out_path,'html/.htaccess'), 'w+')
+    file = open(os.path.join(out_path,'html/.htaccess'), 'w')
     file.write('DirectoryIndex index-msg.html\n')
     file.close()  
 
-  
+publish_doc(package_dirs.keys(), args.output_dir)
