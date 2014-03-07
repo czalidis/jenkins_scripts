@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export REPOS_FILE=~/repos_data/repos.yaml
-export PUBLIC_DIR=~/public_html/api
+export REPOS_FILE=$JENKINS_HOME/repos_data/repos.yaml
+export PUBLIC_DIR=$JENKINS_HOME/public_html/api
 
 source /opt/ros/hydro/setup.bash
 
-./jenkins_scripts/generate_doc.py $REPO_NAME $WORKSPACE/doc 
+$WORKSPACE/jenkins_scripts/generate_doc.py $REPO_NAME $WORKSPACE/doc 
