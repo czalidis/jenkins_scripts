@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 REPO_DIR=upstream
 export REPO_NAME="$(git remote -v | head -n1 | awk '{print $2}' | sed 's/.*\///' | sed 's/\.git//')"

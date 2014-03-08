@@ -16,7 +16,7 @@ def publish_doc(packages, output_dir):
     # copying new docs
     for package in packages:
       cmd = 'rsync -a ' + os.path.join(output_dir, package) + ' ' + public_dir
-      print 'Executing:', cmd
+      print '+', cmd
       os.system(cmd)
     
     doc = open(repos_file, 'w')
@@ -32,13 +32,13 @@ def publish_doc(packages, output_dir):
       # deleting old docs
       for package in repos[repo_name]:
         cmd = 'rm -rf ' + os.path.join(public_dir, package)
-        print 'Executing:', cmd
+        print '+', cmd
         os.system(cmd)
         
     # copying new docs
     for package in packages:
       cmd = 'rsync -a ' + os.path.join(output_dir, package) + ' ' + public_dir
-      print 'Executing:', cmd
+      print '+', cmd
       os.system(cmd)
     
     repos[repo_name] = packages

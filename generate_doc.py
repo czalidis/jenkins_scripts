@@ -32,7 +32,7 @@ if not os.path.isdir(args.output_dir):
 for package in package_dirs:
   out_path = os.path.join(args.output_dir, package)
   cmd = rosdoc + '-o ' + out_path + ' '+ package_dirs[package]
-  print 'Executing:', cmd
+  print '+', cmd
   (status, output) = commands.getstatusoutput(cmd)
   if status:
     sys.stderr.write(output)
